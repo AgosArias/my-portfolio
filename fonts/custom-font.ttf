@@ -1,0 +1,5 @@
+Usa una estructura semántica clara con etiquetas HTML5 como <header>, <nav>, <main>, <section>, <article>, <aside>, <footer>, etc.
+Asegúrate de que cada página tenga un <title> único y relevante.
+Incluye <meta> etiquetas para descripción, palabras clave y autor en el <head>.
+Implementa enlaces internos y externos relevantes.
+Usa etiquetas <h1> a <h6> de manera jerárquica y adecuada para mejorar la accesibilidad y SEO.

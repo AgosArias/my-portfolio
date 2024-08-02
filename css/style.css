@@ -1,0 +1,497 @@
+/* Reseteo de márgenes y rellenos para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0; /* Texto claro sobre fondo oscuro */
+    background-color: #121212; /* Fondo oscuro */
+}
+
+/* Encabezado y navegación */
+header {
+    background: #1f1f1f;
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff; 
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-nav .nav-link {
+    margin-left: 1rem;
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #17a2b8; /* Color al pasar el cursor */
+}
+#skills .container h2{
+    color: black;
+}
+#skills .container h3{
+    color: black;
+}
+#skills .container p{
+    color: black;
+}
+
+.card-body p{
+    color: black;
+}
+
+.card-body h5{
+    color: black;
+}
+
+#testimonials h2{
+    color: black;
+}
+
+/* Hero Section */
+#hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.25rem;
+}
+
+#hero .btn {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    background-color: #00bcd4; /* Botón color tecnológico */
+    border: none;
+    border-radius: 0.3rem;
+    text-decoration: none;
+}
+
+#hero .btn:hover {
+    background-color: #0288d1; /* Botón color más oscuro al pasar el cursor */
+}
+
+/* About Section */
+/* About Section */
+#about {
+    padding: 4rem 1rem;
+    background: #1c1c1c;
+    color: #f1f1f1;
+}
+
+#about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #00bcd4; /* Color del título principal */
+}
+
+#about h2 {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #00bcd4; 
+
+}
+
+#about .about-content {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y el texto */
+    gap: 2rem; /* Espacio entre la imagen y el texto */
+    margin-bottom: 2rem; /* Espacio debajo de la sección */
+}
+
+#about .about-image {
+    flex: 1; /* La imagen toma el espacio disponible en su columna */
+}
+
+#about .about-image img {
+    max-width: 80%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+}
+
+
+#about .about-text {
+    flex: 1; /* El texto toma el espacio disponible en su columna */
+}
+
+#about .img-fluid {
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Sección de habilidades */
+#about .about-skills {
+    text-align: center; /* Centra el texto y la lista de habilidades */
+}
+#about p {
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente del texto */
+}
+#about h3 {
+    font-size: 1.75rem;
+    margin-top: 2rem; /* Espacio encima del encabezado de habilidades */
+    margin-bottom: 1rem;
+    color: #00bcd4; /* Color del encabezado de habilidades */
+}
+
+#about ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0 auto; /* Centra la lista */
+    max-width: 500px; /* Limita el ancho de la lista */
+}
+
+#about ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Diseño responsivo */
+@media (max-width: 767px) {
+    #about .about-content {
+        flex-direction: column; /* Apila la imagen y el texto verticalmente en pantallas pequeñas */
+        text-align: center; /* Centra el texto y la imagen */
+    }
+    
+    #about .about-image, #about .about-text {
+        flex: none; /* Elimina el comportamiento de flex en pantallas pequeñas */
+        margin-bottom: 1rem; /* Espacio debajo de cada sección en pantallas pequeñas */
+    }
+    
+    #about ul {
+        text-align: center; /* Centra la lista en pantallas pequeñas */
+        max-width: 100%; /* Ajusta el ancho de la lista */
+    }
+}
+
+
+/* Footer */
+footer {
+    background: #282828;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+/* Blog Section */
+#blog {
+    padding: 4rem 0;
+    background: #1c1c1c;
+}
+
+#blog h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #00bcd4; /* Color del encabezado */
+}
+
+.blog-card {
+    background: #2c2c2c;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.blog-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog-content {
+    padding: 1rem;
+}
+
+.blog-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00bcd4;
+}
+
+.blog-excerpt {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.blog-card .btn {
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.blog-card .btn:hover {
+    background: #0056b3;
+}
+
+/* Diseño responsivo */
+@media (max-width: 767px) {
+    .blog-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 0;
+    background: #1c1c1c;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #00bcd4; /* Color de encabezado */
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0; /* Color de etiquetas */
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #333;
+    border-radius: 0.3rem;
+    background: #121212; /* Fondo oscuro para campos de formulario */
+    color: #e0e0e0; /* Texto claro en campos de formulario */
+}
+
+#contact button {
+    background-color: #00bcd4; /* Botón color tecnológico */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #0288d1; /* Botón color más oscuro al pasar el cursor */
+}
+
+/* Projects Section */
+#projects {
+    padding: 4rem 0;
+    background: #1c1c1c;
+}
+/* Sección de Proyectos */
+#projects {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+#projects h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#projects p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Contenedor de proyectos */
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.project img {
+    max-width: 100%; /* Asegura que las imágenes no excedan el ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 0.5rem; /* Redondea las esquinas de la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra para mayor profundidad */
+}
+
+.project-details {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.project-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-details p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background: #007bff;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Services Section */
+#services {
+    padding: 4rem 0;
+    background: #1c1c1c;
+}
+
+#services h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #00bcd4; /* Color de encabezado */
+}
+
+.service-card {
+    border: none;
+    border-radius: 0.5rem;
+    background: #2c2c2c; /* Fondo más claro para tarjetas de servicio */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #00bcd4; /* Color de encabezado */
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 4rem 0;
+    background: #1c1c1c;
+}
+
+#testimonials blockquote {
+    border-left: 5px solid #00bcd4; /* Borde izquierdo color tecnológico */
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    background: #2c2c2c;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#testimonials blockquote p {
+    margin-bottom: 1rem;
+}
+
+#testimonials footer {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background: #1f1f1f;
+    color: #e0e0e0;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #00bcd4; /* Color de enlaces */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    #skills h2, #power-automate h2, #projects h2, #testimonials h2, #services h2 {
+        font-size: 1.5rem;
+    }
+
+    #power-automate .card-img-top,
+    .project-card-img {
+        height: 150px;
+    }
+}

@@ -1,0 +1,511 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #343a40;
+$light-bg: #f8f9fa;
+$text-color: #333;
+$font-stack: 'Arial', sans-serif;
+
+// Mixins
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin card-style {
+  border: none;
+  @include border-radius(0.5rem);
+  overflow: hidden;
+}
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  line-height: 1.6;
+  color: $text-color;
+}
+
+// Header and Navigation
+header {
+  background: $light-bg;
+  padding: 1rem 0;
+  border-bottom: 1px solid lighten($light-bg, 10%);
+
+  .navbar {
+    padding: 0 2rem;
+
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .navbar-nav {
+      .nav-link {
+        margin-left: 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Hero Section
+#hero {
+  background: url('images/hero-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  padding: 4rem 0;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    background-color: $primary-color;
+    border: none;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Skills Section
+#skills {
+  padding: 4rem 0;
+
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .col-md-4 {
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Power Automate Section
+#power-automate {
+  padding: 4rem 0;
+
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .card {
+    @include card-style;
+    margin-bottom: 2rem;
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+}
+
+// Featured Projects Section
+#projects {
+  padding: 4rem 0;
+
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .card {
+    @include card-style;
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-text {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Testimonials Section
+#testimonials {
+  padding: 4rem 0;
+  background: $light-bg;
+
+  blockquote {
+    border-left: 5px solid $primary-color;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+
+    p {
+      font-size: 1.25rem;
+    }
+
+    footer {
+      font-size: 1rem;
+      font-style: italic;
+    }
+  }
+}
+
+// Footer
+footer {
+  background: $secondary-color;
+  color: #fff;
+  padding: 1rem 0;
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 767px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  #skills h2, #power-automate h2, #projects h2, #testimonials h2 {
+    font-size: 1.5rem;
+  }
+
+  #power-automate .card-img-top {
+    height: 150px;
+  }
+}
+// About Page Styles
+#about {
+    padding: 4rem 0;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .col-md-6 {
+      margin-bottom: 2rem;
+    }
+  
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+  
+      li {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  
+  // Responsive Design for About Page
+  @media (max-width: 767px) {
+    #about h1 {
+      font-size: 2rem;
+    }
+  
+    #about h2 {
+      font-size: 1.5rem;
+    }
+  
+    #about p, #about h3 {
+      font-size: 0.875rem;
+    }
+  }
+// Blog Page Styles
+#blog {
+    padding: 4rem 0;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  
+    .blog-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+  
+      .blog-img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+  
+      .blog-content {
+        padding: 1rem;
+  
+        .blog-title {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+  
+        .blog-excerpt {
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+  
+        .btn {
+          font-size: 1rem;
+          padding: 0.5rem 1rem;
+          background-color: $primary-color;
+          color: #fff;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 0.25rem;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: darken($primary-color, 10%);
+          }
+        }
+      }
+    }
+  
+    // Responsive Design for Blog Page
+    @media (max-width: 767px) {
+      .blog-card {
+        margin-bottom: 1rem;
+  
+        .blog-content {
+          padding: 0.5rem;
+  
+          .blog-title {
+            font-size: 1.25rem;
+          }
+  
+          .blog-excerpt {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+// Contact Page Styles
+#contact {
+    padding: 4rem 0;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .form-group {
+      margin-bottom: 1.5rem;
+  
+      label {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+  
+      input, textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 0.25rem;
+        font-size: 1rem;
+      }
+  
+      textarea {
+        resize: vertical;
+      }
+    }
+  
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      border-radius: 0.25rem;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+  
+        a {
+          color: $primary-color;
+          text-decoration: none;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  
+  // Responsive Design for Contact Page
+  @media (max-width: 767px) {
+    #contact h1 {
+      font-size: 2rem;
+    }
+  
+    .form-group {
+      label, input, textarea {
+        font-size: 0.875rem;
+      }
+    }
+  
+    .btn {
+      font-size: 0.875rem;
+    }
+  }
+// Services Page Styles
+#services {
+    padding: 4rem 0;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  
+    .service-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+  
+      .service-img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+  
+      .service-content {
+        padding: 1rem;
+  
+        .service-title {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+  
+        .service-description {
+          font-size: 1rem;
+        }
+      }
+    }
+  
+    // Responsive Design for Services Page
+    @media (max-width: 767px) {
+      .service-card {
+        margin-bottom: 1rem;
+  
+        .service-content {
+          padding: 0.5rem;
+  
+          .service-title {
+            font-size: 1.25rem;
+          }
+  
+          .service-description {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+      
