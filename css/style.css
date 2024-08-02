@@ -178,6 +178,19 @@ header {
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
+.column {
+    float: left;
+    width: 50%;
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.subtitle {
+    font-weight: bold;
+}
+
 
 /* Diseño responsivo */
 @media (max-width: 767px) {
@@ -252,6 +265,7 @@ footer p {
 .blog-excerpt {
     font-size: 1rem;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .blog-card .btn {
