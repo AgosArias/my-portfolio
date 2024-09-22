@@ -36,13 +36,18 @@ header {
 .navbar-nav {
     display: flex;
     list-style: none;
+    margin: 0.5rem;
 }
+ 
+
+
 
 .navbar-nav .nav-link {
     margin-left: 1rem;
     font-size: 1rem;
     color: #ffffff;
     text-decoration: none;
+
 }
 
 .navbar-nav .nav-link:hover {
@@ -192,23 +197,6 @@ header {
 }
 
 
-/* Diseño responsivo */
-@media (max-width: 767px) {
-    #about .about-content {
-        flex-direction: column; /* Apila la imagen y el texto verticalmente en pantallas pequeñas */
-        text-align: center; /* Centra el texto y la imagen */
-    }
-    
-    #about .about-image, #about .about-text {
-        flex: none; /* Elimina el comportamiento de flex en pantallas pequeñas */
-        margin-bottom: 1rem; /* Espacio debajo de cada sección en pantallas pequeñas */
-    }
-    
-    #about ul {
-        text-align: center; /* Centra la lista en pantallas pequeñas */
-        max-width: 100%; /* Ajusta el ancho de la lista */
-    }
-}
 
 
 /* Footer */
@@ -282,12 +270,6 @@ footer p {
     background: #0056b3;
 }
 
-/* Diseño responsivo */
-@media (max-width: 767px) {
-    .blog-card {
-        margin-bottom: 1.5rem;
-    }
-}
 
 /* Contact Section */
 #contact {
@@ -483,9 +465,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-
-
-/* Responsive Design */
+/* Media Query para pantallas pequeñas */
 @media (max-width: 767px) {
     #hero h1 {
         font-size: 2.5rem;
@@ -493,6 +473,15 @@ footer a:hover {
 
     #hero p {
         font-size: 1rem;
+    }
+
+    .navbar-nav {
+        justify-content: center;
+        
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 5px; 
     }
 
     .navbar-nav .nav-link {
